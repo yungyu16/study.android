@@ -13,8 +13,11 @@ allprojects {
         google()
         jcenter()
     }
-}
 
+}
+subprojects {
+
+}
 task clean(type: Delete) {
     print(project.STORE_FILE_PATH)
     print(project['android.useAndroidX'])
