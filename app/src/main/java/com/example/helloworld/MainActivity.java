@@ -2,9 +2,12 @@ package com.example.helloworld;
 
 import android.app.Application;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        CharSequence text = ((TextView) findViewById(R.id.gone)).getText();
         super.onCreate(savedInstanceState);
         Button button = new Button(this);
+        getPackageManager().
         button.setText("hello world");
         String name = Thread.currentThread().getName();
         button.setOnClickListener(it -> {
